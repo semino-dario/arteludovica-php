@@ -1,0 +1,1008 @@
+
+*{
+  margin: 0 auto;
+}
+
+body{
+background: radial-gradient(circle, rgba(0,1,4,1) 0%, rgba(58,144,18,1) 0%, rgba(6,42,50,1) 100%);
+background-attachment: fixed;
+background-repeat: no-repeat;
+background-size: cover;
+}
+
+.container-padre{
+  max-width: 1200px;
+}
+
+
+.link{
+  text-decoration: none;
+  color: white;
+  font-size: 120%;
+}
+
+.link:hover{
+  opacity: 0.7;
+}
+
+@font-face {
+
+  font-family:"Bluefish";
+  src: url('../fonts/bluefish.otf');
+  font-weight:normal;
+  font-style:normal;
+  font-display:swap;
+}
+
+@font-face {
+  font-family: "../fonts/Bluesfish-bold";
+  src:url(Bluefish_Bold.otf);
+  font-weight: normal;
+  font-display: swap;
+}
+
+
+
+:root{
+  --color-titulo:#E7DBC5;
+  --color-rojo: #C14953;
+  --color-gris:#ADA0A6;
+
+}
+
+.no-desplegada{
+  display: none;
+}
+
+
+/*PRELODER*/
+
+#preloder{
+  height: 100%;
+  width:100%;
+  z-index: 100;
+  background: black;
+  background-size: 100%;
+  position: fixed;
+  text-align: center;
+  left: 0;
+  top: 0;
+  color: var(--color-titulo);
+  padding-top:15%;
+  }
+
+
+
+.titulo-svg{
+  text-align: center;
+}
+
+/* NAV BAR*/
+
+.contenedor-icono-celular{
+  display: none;
+}
+
+.nav-container{
+  display: none;
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+
+nav{
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  text-align: center;
+  top: 0px;
+  left: 0px;
+  width: 20px;
+  z-index: 200;
+  background-color: none;
+
+  
+}
+
+.nav-boton{
+  z-index: 200;
+}
+
+.contenedor-icono{
+  margin-top: 60px;
+  margin-left:20px;
+}
+
+.barra-elementos{
+display: flex;
+flex-direction: column;
+justify-content:left;
+width: 20%;
+margin-left: 5px;
+font-family: monospace;
+font-size: 160%;
+margin-top: -440px;
+-webkit-transition: margin 0.5s, background 0.5s;
+  -moz-transition: margin 0.5s, background 0.5s;
+  -o-transition: margin 0.5s, background 0.5s;
+  transition: margin 0.5s, background 0.5s;
+}
+
+.items-barra{
+  text-decoration: none;
+  color: var(--color-titulo);
+  border: solid 1px var(--color-titulo);
+  padding: 5px 15px; 
+  background-color: #C14953;
+  border-radius: 30px;
+  margin-top: 20px;
+  font-family: monospace;
+  font-size: 20px;
+}
+
+
+#elementos {
+  -webkit-transition-timing-function: ease;
+  -moz-transition-timing-function: ease;
+  -o-transition-timing-function: ease;
+  transition-timing-function: ease;
+}
+
+.desplegada {
+    margin-top: 30px;
+}
+
+.items-desplegados{
+  padding: 5px 15px; 
+  transition: padding 0.3s;
+
+}
+
+.items-desplegados:hover{
+  padding-left: 50px;
+}
+
+
+
+/* TITULO Y COPETE*/
+
+#titulo-principal{
+  margin-top: 5%;
+  text-align: center;
+  font-size: 700%;
+  font-family:"Bluefish";
+  color: var(--color-titulo);
+  letter-spacing: 3px;
+  opacity: 0;
+  transition: opacity 2s;
+
+}
+
+.subtitulo{
+  text-align: center;
+  margin: 3%  7% -2% 7%;
+  opacity: 0;
+  color: var(--color-gris);
+  transition: opacity 3s;
+}
+
+.copete{
+  margin: -10%  25% 10% 25%;
+  padding: 3%;
+  font-size: 120%;
+  color: var(--color-titulo);
+  border-style: solid;
+  border-left: none;
+  border-right: none;
+  border-top: none;
+  border-width: 2px;
+  font-family:monospace;
+  text-align: center;
+  opacity: 0;
+  transition: opacity 6s;
+
+}
+
+.vector{
+  stroke-width: 1px;
+  stroke: #f16c69;
+  stroke-dasharray: 1600;
+  stroke-dashoffset: 1600;
+  fill: transparent;
+  animation: dash 40s both;
+  animation-delay: 1.5s;
+}
+
+
+
+@keyframes dash {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+
+.imagen-portada{
+  opacity: 0;
+  transition: opacity 3s;
+  border-bottom: 0px;
+
+
+}
+
+#foto-ludovica{
+  display: block;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+
+
+}
+
+/* OBRAS DE TEATRO*/
+
+#copete-obras{
+  margin-top: 2%;
+}
+
+.contenedor{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  perspective: 2000px;
+}
+
+.contenedor-2{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  perspective: 2000px;
+} 
+
+
+.tarjeta{
+  margin-bottom: 10%;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  transition: transform .5s;
+  transform-style: preserve-3d;
+  width: 400px;
+  height: 400px;
+}
+
+
+.tarjeta.descubierta{
+  transform: rotateY(180deg);
+}
+
+
+.tarjeta-imagen{
+position: absolute;
+display: flex;
+flex-direction: column;
+-webkit-backface-visibility: hidden;
+-moz-backface-visibility: hidden;
+-o-backface-visibility: hidden;
+backface-visibility: hidden;
+}
+
+.imagen{
+  cursor: pointer;
+  display: block;
+  object-fit: cover;
+  width: 400px;
+  height: 400px;
+  border-radius: 5px;
+}
+
+.svg-frente{
+ cursor: pointer;
+ margin-top: 5px;
+ margin-right: 0px;
+}
+
+#svg-frente-fill{
+  transition: fill 0.5s;
+}
+
+#svg-frente-fill:hover{
+  fill: #000;
+}
+
+.anula-svg{
+  display: none;
+}
+
+.voltea-svg{
+transform: rotateY(360deg);}
+
+
+.tarjeta-contenido{
+display: flex;
+flex-direction: column;
+align-items:center;
+text-align: center;
+-webkit-backface-visibility: hidden;
+-moz-backface-visibility: hidden;
+-o-backface-visibility: hidden;
+backface-visibility: hidden;
+transform: rotateY(180deg);
+border-style: solid;
+border-width: 1px;
+border-radius: 5px;
+width: 400px;
+height: 400px;
+background: #1E2223;
+font-family:serif;
+
+}
+
+.titulo-tarjeta{
+  color:white;
+  font-size: 150%;
+  display: flex;
+  flex-grow: 1;
+  margin-top: 15%;
+  font-family: 'Allerta Stencil', sans-serif;
+
+
+}
+
+
+
+.texto-tarjeta{
+  padding-left: 3%;
+  padding-right: 3%;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  font-family: 'Allerta Stencil', sans-serif;
+  color: var(--color-titulo);
+  text-align: center;
+  font-size: 150%;
+
+}
+
+.boton-tarjeta{
+  text-decoration: none;
+}
+
+
+/*MÚSICA*/
+
+.seccion-musica{
+display: flex;
+position: relative;
+align-items: center;
+margin-top: 5%;
+margin-bottom: 10%;
+border-style:solid;
+border-width: 1px;
+border-top: none;
+border-left: none;
+border-right: none;
+border-color: var(--color-titulo);
+padding-bottom: 7%;
+}
+
+
+.div-musica{
+display: none;
+width: 60vw;
+height: 50vh;
+text-align: center;
+border-radius: 5px;
+
+}
+
+.musica{
+  border-radius: 5px;
+}
+
+.musica-contenido{
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content:space-between;
+  width: 60vw;
+  height: 50vh;
+  color:var(--color-titulo);
+  transition: opacity 2s;
+
+}
+
+#boton-escuchar{
+  margin-top: 5%;
+  cursor: pointer;
+}
+
+
+
+#cierra-musica{
+  cursor:pointer;
+}
+
+.imagen-disco{
+  filter: contrast(140%);
+  display: block;
+  object-fit: cover;
+  width: 300px;
+  height: 300px;
+  transition: transform 1s;
+  cursor:pointer;
+  margin-bottom: 10%;
+}
+
+
+.girar{
+transform: rotateZ(720deg);
+
+}
+
+/*VIDEO*/
+
+.video-teatrailer{
+  text-align: center;
+  color:white;
+  width: 100%;
+  max-width: 550px;
+}
+
+.mascara-video{
+  position: relative;
+  padding-bottom: 56.15%;
+  height: 0;
+  overflow: hidden;
+  text-align: center;
+  border: solid 10px white;
+  line-height: 0;
+}
+
+.video{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border:0;
+}
+
+
+/*TEXTOS*/
+
+.seccion-textos{
+display: flex;
+flex-direction: column;
+position: relative;
+align-items: center;
+width: 60vw;
+margin-top: 5%;
+margin-bottom: 10%;
+padding-bottom: 2%;
+}
+
+.seccion-textos-2{
+  display: flex;
+flex-direction: column;
+position: relative;
+align-items: center;
+width: 60vw;
+margin-top: 5%;
+margin-bottom: -2%;
+padding-bottom: 2%;
+}
+
+
+.textos-titulo{
+font-family: 'Allerta Stencil', sans-serif;
+color:var(--color-titulo);
+font-size: 200%;
+text-align: center;
+
+}
+
+.texto{
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  text-align: center;
+  color:var(--color-titulo);
+  font-family: monospace;
+  font-size: 120%;
+  margin-bottom: 5%;
+
+}
+
+
+
+.textos-descarga{
+  display: flex;
+  justify-content: space-between;
+  font-size: 120%;
+  color:var(--color-titulo);
+  width: 100%;
+  border-style:solid;
+  border-width: 0px 0px 1px 0px;
+  border-color: var(--color-titulo);
+  padding-bottom: 5%;
+  cursor:pointer;
+}
+
+.div-boton-descarga{
+display: none;
+flex-direction: column;
+opacity: 0;
+transition: opacity 0.3s;
+border-style: solid;
+border-width: 0px 0px 1px 0px;
+border-color: var(--color-titulo);
+padding-bottom: 3%;
+}
+
+.botones-descarga{
+  font-size: 120%;
+  width: 200px;
+  background: transparent;
+  color: var(--color-gris);
+  border: none;
+  font-family:sans-serif;
+  padding: 3%;
+}
+
+.botones-descarga:hover{
+color: var(--color-titulo);
+border-color: var(--color-titulo);
+}
+
+.pdf {
+  font-size: 120%;
+  transition: transform 0.5s;
+}
+
+.pdf:hover{
+  transform: scale(1.2);
+}
+
+#boton-cierra-descarga{
+width: 20%;
+border-radius: 50px;
+margin-top: 5%;
+margin-left: 38%;
+
+}
+
+.icono-cruz{
+  transform-origin: 50% 50%;
+  transition: transform 1s;
+
+}
+
+.icono-cruz:hover{
+transform: rotateZ(180deg);
+
+
+}
+
+.icono-svg{
+  transition: 0.5s;
+
+}
+
+.Group:hover{
+  fill:var(--color-rojo);
+}
+
+.Group2:hover{
+  fill: black;
+}
+
+
+.selected{
+  border-style: solid;
+  border-width: 0px 0px 2px 0px;
+  transform: scale(1.2);
+}
+
+
+
+/*TERRITORIOS*/
+
+.slideshow-container {
+  width: 540px;
+  height: 350px;
+  position: relative;
+  margin: auto;
+  overflow: hidden;
+  border: solid 10px white;
+  line-height: 0;
+
+}
+
+.mySlides {
+  display: block;
+  width: 100%;  }
+
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 4s;
+  animation-name: fade;
+  animation-duration: 4s;
+}
+
+@-webkit-keyframes fade {
+  0% { opacity: 0.4; } 
+  66% { opacity: 1; }
+  100% { opacity: 1; }
+}
+
+@keyframes fade {
+  0% { opacity: 0.4; } 
+  66% { opacity: 1; }
+  100% { opacity: 1; }
+}
+
+.imagen-carrusel {
+  width: 100%;
+  height: 100%;  
+  object-fit: cover;
+
+}
+
+
+
+#equipo{
+  margin-top: 10%;
+}
+
+/*EQUIPO*/
+
+.imagen-puerta-mimoteatro{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  object-fit:cover;
+}
+
+.div-imagen-equipo{
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.tarjeta-equipo {
+  display: none;
+  text-align: center;
+  color: var(--color-titulo);
+  border: solid 1px var(--color-titulo);
+  width: 32em;
+  padding: 1%;
+  border-radius: 3%;
+}
+
+.muestra-tarjeta{
+display: flex;
+}
+
+#nombre-retrato{
+font-size: 120%;
+}
+
+.foto-link{
+cursor: pointer;
+}
+
+.imagen-mapa{
+border: solid 10px white;}
+
+#texto-retrato{
+text-align: left;
+margin-left: 3%;
+}
+
+.contenido-retrato{
+width: 90%;
+}
+
+.foto-retrato1{
+  object-fit: cover;
+  width: 10px;
+  margin-top: 200px;
+}
+.boton-integrante{
+  background: transparent;
+  color: var(--color-titulo);
+  border-radius: 30px;
+  border: solid 1px var(--color-titulo);
+  padding: 1%;
+  width: 80px;
+  cursor: pointer;
+  margin-top: 3%;
+}
+
+.boton-integrante:hover{
+  background-color: #1E2223;
+}
+
+
+
+/*COLOFON*/
+
+.copete-autoescritura{
+  font-size: 120%;
+  color: var(--color-titulo);
+  font-family:monospace;
+  margin: 3%  25% 5% 25%;
+  padding-bottom: 2%;
+  text-align: center;
+}
+
+.texto-colofon{
+  width: 600px;
+}
+
+.info-contacto{
+  opacity: 0;
+  transition: opacity 1s;
+}
+.colofon{
+  margin-top: 20%;
+  padding-top: 5%;
+  border-top: solid 1px var(--color-titulo);
+}
+
+
+
+/*AJUSTES POR TAMAÑO DE PANTALLA*/
+
+
+@media (max-width: 1250px){
+  .tarjeta{
+    width: 300px;
+    height: 300px;
+  }
+
+    .tarjeta{
+      width: 300px;
+      height: 300px;
+    }
+
+  .imagen{
+    width: 300px;
+    height: 300px;
+  }
+
+  .tarjeta-contenido{
+    width: 300px;
+    height: 300px;
+  }
+  .texto-tarjeta{
+    font-size: 85%;
+  }
+  .titulo-tarjeta{
+  font-size: 100%;
+
+  }
+
+  .boton-tarjeta{
+  font-size: 110%;
+  }
+
+.pdf{
+  margin-left: auto;
+}
+}
+
+@media (max-width: 950px){
+
+body{
+  background-attachment: initial;
+  background-repeat: initial;
+  background-size: initial;
+  }
+
+#titulo-principal{
+  font-size: 2.5em;
+  margin-top: 10%;
+  font-family: 'Allerta Stencil', sans-serif;
+
+}
+
+  .contenedor{
+    flex-direction: column;
+  }
+
+
+
+.texto{
+  flex-direction: column;
+}
+
+.seccion-musica{
+  flex-direction: column;
+  width: 80%;
+}
+
+.musica-contenido{
+  text-align: center;
+  flex-direction: column;
+}
+
+.titulo-y-texto{
+  display: flex;
+  flex-direction: column;
+}
+
+.div-musica{
+  width: 80vw;
+
+}
+
+.musica{
+  width: 80vw;
+  height: 300px;
+}
+
+.imagen-disco{
+  width: 240px;
+  height: 240px;
+  margin-bottom: 20px;
+}
+
+.musica-contenido{
+  flex-direction: column;
+  width: 80%;
+  height: 40%;
+}
+
+.video-teatrailer{
+  padding: 0;
+}
+
+.seccion-textos{
+    width: 80%;
+}
+
+.seccion-textos-2{
+  width: 80%;
+}
+.textos-descarga{
+  flex-direction: column;
+  margin-left: auto;
+  }
+
+.pdf{
+
+  margin-top: 10px;
+}
+
+}
+
+
+@media (max-width: 650px){
+
+.slideshow-container{
+  width: 330px;
+  height: 220px;
+  }
+
+  .tarjeta-equipo{
+    flex-direction: column;
+    width: 15em;
+  }
+
+}
+
+@media (max-width: 600px){
+
+.contenedor{
+  margin-top: 10%;
+}
+
+.contenedor-2{
+  margin-top: 10%;
+}
+
+.copete{
+  margin: 0  3% 3% 3%;
+}
+
+#copete-obras{
+  margin-top: 20%;
+}
+
+#obras{
+  margin-top: 20%;
+  margin-bottom: -15%;
+}
+
+.subtitulo{
+  font-size: 70%;
+}
+
+.textos-titulo{
+  font-size: 160%;
+}
+
+.div-musica{
+  padding-bottom:30%;
+}
+
+.imagen-disco{
+  width: 200px;
+  height: 200px;
+}
+
+
+.texto-colofon{
+  width: 300px;
+}
+
+}
+
+@media (max-width: 400px){
+
+  #titulo-principal{
+    margin-top: 10%;
+    margin-bottom: 5%;
+    font-size: 2em;
+  }
+
+.subtitulo{
+  margin-bottom: 15%;
+
+}
+
+.imagen-portada{
+  margin-top: -10%;
+}
+
+.copete{
+  margin-top: 1%;
+  margin-bottom: 0%;
+
+}
+
+
+.textos-texto{
+  font-size: 100%;
+}
+
+.pdf{
+  font-size: 100%;
+}
+
+}
+
+@media (max-width: 300px){
+
+  #titulo-principal{
+    margin-top: 5%;
+  }
+
+  .tarjeta{
+    width: 80%;
+    height: 300px;
+  }
+
+  .imagen{
+    width: 250px;
+    height: 250px;
+  }
+
+  .tarjeta-contenido{
+    width: 250px;
+    height: 250px;
+  }
+  .texto-tarjeta{
+    font-size: 85%;
+  }
+  .titulo-tarjeta{
+  font-size: 70%;
+  }
+
+  .boton-tarjeta{
+  font-size: 110%;
+  }
+}

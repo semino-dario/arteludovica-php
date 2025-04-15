@@ -1,0 +1,322 @@
+body {
+  background: linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 1) 18%,
+    rgba(30, 34, 35, 1) 85%,
+    rgba(30, 34, 35, 1) 87%
+  );
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+}
+
+.seccion-grid {
+  display: grid;
+}
+
+img {
+  object-fit: cover;
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.encabezado {
+  font-family: "Anton", sans-serif;
+  font-size: 300%;
+  color: #e7dbc5;
+  padding-top: 3%;
+  text-align: center;
+}
+
+.barra-etiquetas
+ {
+  width: 40%;
+  display: flex;
+  color: #e7dbc5;
+  font-family: "EB Garamond", serif;
+  font-size: 120%;
+  align-items: center;
+  justify-content: space-around;
+  padding-top: 1%;
+}
+
+.etiqueta 
+{
+  padding: 0 10% 0% 10%;
+  cursor: pointer;
+}
+
+.etiqueta:hover {
+  color: red;
+}
+
+.seleccionada {
+  text-decoration: underline;
+  color: red;
+}
+
+.gallery {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  transform-style: preserve-3d;
+  animation: rotate 45s linear infinite;
+  z-index: 1;
+}
+
+.imagen-giratoria {
+  border-radius: 150px;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #c14953;
+}
+
+@keyframes rotate {
+  from {
+    transform: perspective(1200px) rotateY(0deg);
+  }
+
+  to {
+    transform: perspective(1200px) rotateY(360deg);
+  }
+}
+
+.spanes {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transform-origin: center;
+  transform-style: preserve-3d;
+  transform: rotateY(calc(var(--i) * 45deg)) translateZ(350px);
+}
+
+.gallery .spanes img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+#galeria-principal {
+  margin-top: 5%;
+  margin-bottom: -20%;
+  transition: opacity 0.5s;
+  opacity: 0;
+
+}
+
+#imagen-nanu-sola {
+  object-position: right;
+}
+
+
+.imagen-fija {
+  position: fixed;
+  bottom: 0;
+  left: 33%;
+  transition: 0.5s;
+  width: 25em;
+}
+
+.imagen-fija img{
+width: 100%;
+height: auto;
+}
+
+.secciones-desplegadas {
+  display: none;
+}
+
+.div-historia {
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+}
+
+.texto-historia-banquete {
+  width: 90%;
+  font-size: 130%;
+  text-align: left;
+  z-index: 3;
+}
+
+.imagen-historia-banquete {
+  position: fixed;
+  bottom: 0;
+  z-index: 1;
+}
+
+#seccion-historia {
+  margin-top: 5%;
+  color: #e7dbc5;
+  opacity: 0;
+  transition: opacity 0.5s;
+  text-align: center;
+  display: none;
+}
+
+.div-elenco {
+  display: flex;
+  width: 60%;
+  margin-bottom: 0px;
+}
+
+#seccion-elenco {
+  margin-top: 5%;
+  color: #e7dbc5;
+  opacity: 0;
+  transition: opacity 0.5s;
+  text-align: center;
+  bottom: 0;
+}
+
+.texto-elenco-banquete {
+  width: 80%;
+  font-size: 130%;
+  text-align: left;
+  margin-left: 5%;
+  z-index: 3;
+}
+
+
+
+.boton-cierra-seccion {
+  cursor: pointer;
+}
+
+.imagen-elenco-banquete {
+  position: fixed;
+  bottom: 0px;
+  z-index: 1;
+  margin-left: 25%;
+}
+
+
+
+.no-desplegada {
+  display: none;
+}
+
+
+#seccion-criticas{
+  text-align: center;
+}
+
+@media (max-width: 900px){
+
+   
+  body{
+    background: #000;
+
+  }
+
+  
+  .gallery {
+    margin-top:15%;
+    width:190px;
+    height: 190px;
+  }
+
+
+ 
+
+  .spanes{
+    transform: rotateY(calc(var(--i) * 45deg)) translateZ(250px);
+  
+  }
+
+}
+
+@media (max-width: 600px){
+
+.encabezado{
+  font-size: 200%;
+  padding-top: 15%;
+  padding-bottom: 10%;
+}
+
+  .gallery {
+    width:110px;
+    height: 110px;
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+  }
+  .spanes{
+    transform: rotateY(calc(var(--i) * 45deg)) translateZ(200px);
+  
+  }
+
+  .barra-etiquetas
+  {
+    flex-direction: column;
+    justify-content: center;
+    padding-bottom: 5%;
+  }
+.etiqueta{
+  padding: 0;
+}
+
+  .imagen-fija{
+display: none; 
+ }
+
+.div-historia{
+position: relative;
+flex-flow: column-reverse;
+}
+
+.imagen-historia-banquete{
+  display: none;
+}
+
+.texto-historia-banquete{
+  font-size: 120%;
+  width: 120%;
+  margin-bottom: 40%;
+  margin-left: -15%;
+}
+
+
+.div-elenco{
+  position: relative;
+  flex-flow: column-reverse;
+  }
+  
+  .imagen-elenco-banquete{
+    position: absolute;
+    margin-bottom: -25%;
+    width: 150%;
+    margin-left: -25%;
+  }
+  
+  .texto-elenco-banquete{
+    font-size: 120%;
+    width: 120%;
+    margin-bottom: 60%;
+    margin-left: -15%;
+  }
+
+  .comentarios-banquete{
+    padding-bottom: 30%;
+  }
+
+}
+
+@media (max-width: 400px){
+
+
+
+
+.comentarios{
+  margin-left: -10px;
+}
+
+  .spanes{
+    transform: rotateY(calc(var(--i) * 45deg)) translateZ(150px);
+  
+  }
+}

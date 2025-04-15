@@ -1,0 +1,24 @@
+.boton-celular{
+    display: none;
+}
+
+
+
+@media (max-width: 900px){
+
+    .row .three {
+      color: var(--color-rojo)!important;
+      background-color: var(--color-rojo) !important;
+  
+    }
+  
+    .hamburger .line{
+      background-color: var(--color-rojo) !important;
+    }
+  
+    #hamburger-9.is-active:before{
+      border: 5px solid var(--color-titulo) !important;
+    }
+    
+    
+  }

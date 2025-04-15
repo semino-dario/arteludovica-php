@@ -1,0 +1,428 @@
+body{
+background: linear-gradient(0deg, rgba(0,0,0,1) 18%, rgba(30,34,35,1) 85%, rgba(30,34,35,1) 87%);
+background-attachment: fixed;
+background-repeat: no-repeat;
+background-size: cover;
+color: #E7DBC5;
+text-align: center;
+font-family:  'EB Garamond', serif;
+
+}
+
+#portada{
+  font-size: 230%;
+  margin-top: 4%;
+}
+
+img{
+  object-fit: cover;
+}
+
+
+h2{
+  color: #E7DBC5;
+
+}
+p{
+  font-size: 120%;
+
+}
+
+ul{
+  font-size: 120%;
+}
+
+.principal-tejedoras{
+display:none;
+}
+
+
+
+#imagen-tejedoras{
+  object-fit: cover;
+  position: relative;
+  z-index: 1;
+  border-style: solid;
+  border-color: white;
+  border-width: 2px;
+  border-radius: 5px;
+  border-color: #E7DBC5;
+
+}
+
+#imagen-diego-pistola{
+  position: absolute;
+  object-fit: cover;
+  opacity: 0;
+  margin-left: 300px;
+  margin-top: 30px;
+  transition: opacity 5s;
+  z-index: 2;
+  object-position:left;
+
+}
+
+
+h1{
+  font-family: 'Dancing Script', cursive;
+  font-size: 200%;
+  color: #E64352;
+}
+
+
+#luisina-fantasma{
+  position: absolute;
+  object-fit: cover;
+  opacity: 0;
+  margin-top: 140px;
+  margin-left: 520px;
+  transition: opacity 5s;
+  z-index: 3;
+  object-position:right;
+
+}
+
+#galeria-celular{
+  display: none;
+
+}
+
+#nadia-tejiendo{
+  width: 300px;
+  object-fit: cover;
+  position: relative;
+  z-index: 1;
+  border-style: solid;
+  border-color: white;
+  border-width: 2px;
+  border-radius: 5px;
+  border-color: #E7DBC5;
+}
+
+#cara-fantasma{
+  position: absolute;
+  z-index: 2;
+  margin-top: 60px;
+  margin-left: 20px;
+  opacity: 0;
+  transition: opacity 5s;
+  height: 120px;
+  width: 90px;
+}
+
+
+.secciones-desplegadas{
+  display:none;
+  transition: opacity 0.5s;
+}
+ .etiquetas{
+   display: flex;
+   margin-top: 3%;
+   margin-bottom: 4%;
+   font-size: 0.6em;
+   width: 40%;
+ }
+
+.etiqueta{
+  font-family: 'Dancing Script', cursive;
+  color: #E7DBC5;
+  cursor: pointer;
+  padding: 0 15% 0 0;
+
+
+}
+
+.etiquetas-1{
+  display: flex;
+}
+
+.etiquetas-2{
+  display: flex;
+
+}
+
+.etiqueta:hover{
+  text-decoration: underline;
+}
+
+.historia-tejedoras{
+display: flex;
+width: 70%;
+justify-content:center;
+}
+
+.funciones-tejedoras{
+  width: 70%;
+  border: solid 2px  #E7DBC5;
+  margin-bottom: 5%;
+  }
+
+  .imagen-historia-tejedoras{
+    border-style: solid;
+    border-width: 2px;
+    border-color: #E7DBC5;
+  }
+  
+  .texto-historia-tejedoras{
+    width: 35%;
+    text-align: left;
+  }
+  
+  .texto-funciones-tejedoras{
+    text-align: left;
+    padding: 1%;
+  }
+
+.vector{
+  stroke-width: 1px;
+  stroke: #f16c69;
+  stroke-dasharray: 1600;
+  stroke-dashoffset: 1600;
+  fill: transparent;
+  animation: dash 10s linear forwards;
+}
+
+
+.vector2{
+  stroke-width: 1px;
+  stroke: #f16c69;
+  stroke-dasharray: 1600;
+  stroke-dashoffset: 1600;
+  fill: transparent;
+  animation: dash 25s linear forwards;
+}
+
+
+
+@keyframes dash {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+
+.imagen-ovillo1{
+  margin-top: 5%;
+}
+
+#ovillo7{
+margin-top: 0.5%;
+margin-left: -1%;
+position: absolute;
+transition: transform 3s;
+
+}
+
+.girar{
+transform: rotateZ(-180deg);
+}
+
+
+#ovillo8{
+position: absolute;
+margin-left: -3%;
+transition: transform 5s;
+margin-top: -2%;
+animation-name: slidein;
+animation-duration: 5s;
+}
+
+@keyframes slidein {
+
+
+  from {
+  margin-left: 11%;
+}
+
+to{
+margin-left: -3%;
+
+}
+
+}
+
+.girar2{
+transform: rotateZ(380deg);
+  }
+
+.seleccionada{
+    color: #E64352;
+}
+
+
+
+#texto-elenco-tejedoras{
+  margin-bottom: 15%;
+}
+
+.imagen-ovillo1{
+  text-align: right;
+}
+
+.teatrailer{
+  display: flex;
+  justify-content: center;
+}
+
+.texto-teatrailer-tejedoras{
+  margin-top: 3%;
+  width: 40%;
+}
+
+.criticas-completas{
+  display: none;
+}
+
+
+.contenedor-elenco{
+    display: flex;
+    width: 70%;
+}
+.imagen-elenco{
+  border-style: solid;
+  border-width: 2px;
+  border-color: #E7DBC5;
+}
+
+
+
+/*AJUSTES POR PANTALLA*/
+
+@media (max-width: 1300px)
+{
+  .etiquetas{
+    width: 60%;
+  }
+  
+}
+
+
+
+@media (max-width: 1100px)
+{
+
+ 
+.etiqueta{
+  margin-bottom: 3%;
+}
+
+.flex-celular{
+  flex-direction: column;
+  width: 90%;
+}
+
+.texto-historia-tejedoras{
+  margin-top: 10%;
+  width: 100%;
+}
+
+}
+
+@media (max-width: 800px){
+
+  .etiquetas{
+    width: 85%;
+  }
+  
+
+  .funciones-tejedoras{
+    width: 90%;
+  }
+}
+  @media (max-width: 900px){
+
+.galeria-pantalla-grande{
+  display: none;
+}
+
+#galeria-principal-celular{
+  margin-bottom: 40px;
+  margin-left: 0px;
+}
+
+#galeria-celular{
+  display: block;
+}
+    body{
+      background:#1E2223;
+      background-attachment: initial;
+      background-repeat: initial;
+      background-size: initial;
+    }
+
+.etiqueta{
+
+padding-top: 3%;
+    }
+
+  .etiquetas{
+    flex-direction: row;
+  }
+
+.etiquetas-1{
+flex-direction: column;
+}
+
+.etiquetas-2{
+  flex-direction: column;
+
+}
+  iframe{
+    width:80%;
+  }
+
+
+.girar2{
+  transform: none;
+}
+ 
+.vector{
+  stroke-dasharray: none;
+  stroke-dashoffset: none;
+  fill:#DBC071;
+}
+
+.vector2{
+  stroke-dasharray: none;
+  stroke-dashoffset: none;
+  fill:#51830B;
+}
+
+
+#ovillo8{
+  animation: none;
+  }
+
+
+}
+@media (max-width: 550px){
+
+  #portada{
+    font-size: 150%;
+  }
+
+  .imagen-historia-tejedoras{
+    width: 300px;
+  }
+
+  .imagen-elenco{
+    width: 300px;
+  }
+
+.texto-historia-tejedoras{
+font-size: 80%;
+}
+
+.funciones-tejedoras{
+  font-size: 80%;
+
+}
+
+#titulo-principal-tejedoras{
+margin-top: 30px;
+}
+
+}
+
+
+

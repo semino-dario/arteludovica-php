@@ -1,0 +1,152 @@
+.cf:before,
+.cf:after {
+    display: table;
+}
+
+.cf:after {
+    clear: both;
+}
+
+.cf {
+    *zoom: 1;
+}
+
+
+
+.row .three{
+  padding: 80px 30px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  background-color: #E7DBC5;
+  color: #E7DBC5;
+  text-align: center;
+}
+
+
+.hamburger .line{
+  width: 50px;
+  height: 5px;
+  background-color: #E7DBC5;
+  display: block;
+  margin: 8px auto;
+  -webkit-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.hamburger:hover{
+  cursor: pointer;
+}
+
+#hamburger-9{
+  position: relative;
+  -webkit-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+#hamburger-9.is-active{
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+
+}
+
+#hamburger-9:before{
+  content: "";
+  position: absolute;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 70px;
+  height: 70px;
+  border: 5px solid transparent;
+  top: calc(50% - 35px);
+  left: calc(50% - 35px);
+  border-radius: 100%;
+  -webkit-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+#hamburger-9.is-active:before{
+  border: 5px solid #C14953;
+}
+
+#hamburger-9.is-active .line{
+  width: 35px;
+
+}
+
+#hamburger-9.is-active .line:nth-child(2){
+  opacity: 0;
+}
+
+#hamburger-9.is-active .line:nth-child(1){
+  -webkit-transform: translateY(13px);
+  -ms-transform: translateY(13px);
+  -o-transform: translateY(13px);
+  transform: translateY(13px);
+
+}
+
+#hamburger-9.is-active .line:nth-child(3){
+  -webkit-transform: translateY(-13px) rotate(90deg);
+  -ms-transform: translateY(-13px) rotate(90deg);
+  -o-transform: translateY(-13px) rotate(90deg);
+  transform: translateY(-13px) rotate(90deg);
+
+}
+
+
+@media(max-width: 900px) {
+#hamburger-9.is-active:before{
+  border: none;
+}
+
+#hamburger-9:before{
+  border: none;
+}
+
+
+#hamburger-9.is-active .line:nth-child(3){
+  opacity: 1;
+}
+
+
+
+}
+
+@media (max-width: 600px) {
+
+  .row .three{
+    color: #E7DBC5;
+    background-color: #E7DBC5;
+  }
+  .hamburger .line{
+    background-color: #E7DBC5;
+  }
+
+  .hamburger .line{
+  width: 5px;
+  height: 4px;
+  margin: 9px auto;
+}
+
+#hamburger-9.is-active .line{
+  width: 25px;
+
+}
+
+}
+
+
+
+   
+
+
+  
+
+

@@ -1,0 +1,147 @@
+.pasa-obra {
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    bottom:5px;
+    right: 15px;
+    font-family: monospace;
+    background-color: #c14953;
+    color: var(--color-titulo);
+    border: solid 1px var(--color-titulo);
+    padding: 5px;
+    width: 100px;
+    height: 23px;
+    border-radius: 30px;
+    cursor: pointer;
+    text-align: center;
+    transition: bottom 0.5s;
+
+  }
+  
+  .obra-anterior{
+    margin-right: 150px;
+  }
+  .pasa-obra-anterior{
+    position: fixed;
+    bottom:5px;
+    left: 15px;
+    font-family: monospace;
+    background-color: #c14953;
+    color: var(--color-titulo);
+    border: solid 1px var(--color-titulo);
+    padding: 5px;
+    width: 90px;
+    height: 23px;
+    border-radius: 30px;
+    cursor: pointer;
+    text-align: center;
+  }
+
+
+  .boton-cerrar-seccion{
+    width: 90px;
+    position: fixed;
+    bottom: 5px;
+    left:15px;
+    display: none;
+    z-index: 150;
+    transition: bottom 0.5s;
+
+  }
+
+  .boton-cerrar-seccion:hover{
+    bottom: 10px;
+
+  }
+
+.contenedor-barra-celular{
+    display: none;
+}
+
+.boton-pasa-obra{
+  transition: bottom 0.5s;
+}
+
+.boton-pasa-obra:hover{
+  bottom:10px;
+}
+
+.pasa-obra:hover{
+  bottom:10px;
+  }
+
+.link-galeria{
+  text-decoration: none;
+  color:inherit;
+}
+
+
+@media (max-width: 900px) {
+
+
+  .secciones-desplegadas{
+    margin-bottom: 20%;
+  }
+  
+  .contenedor-icono-celular{
+    display: block;
+    position: relative;
+    margin-top: -1%;
+    }
+
+    .pasa-obra{
+    display: none;
+    border: none;
+    }
+  
+    .pasa-obra-anterior{
+      display: none;
+      border: none;
+    }
+
+    .atras{
+      display:none;
+    }
+
+    .contenedor-barra-celular{
+        display: flex;
+        position: fixed;
+        bottom: 0px;
+        width: 100%;
+        background-color: #c14953;
+        height: 45px;
+        z-index: 100;
+        text-align: center;
+    }
+
+    .boton-celular{
+    position: relative;
+    margin-right: 3px;
+    width: 100px;
+    margin-top: 10px;
+
+    }
+
+    .anterior{
+      margin-left: 3px;  
+    }
+
+    .siguiente{
+      margin-right: 3px;  
+      margin-left: 3px;  
+    }
+
+    .boton-cerrar-seccion{
+      bottom:2px;
+      right: 15px;
+      
+    }
+
+    .atras{
+      opacity: 0;
+      margin-left: -5000px;
+    }
+
+    }
+
